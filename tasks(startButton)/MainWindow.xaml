@@ -1,0 +1,95 @@
+﻿<Window x:Class="tasks_startButton_.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tasks_startButton_"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="250"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnStart" Grid.Row="0" Grid.ColumnSpan="2" Height="40" Width="80" Click="BtnStart_Click">Start</Button>
+        <FlowDocumentScrollViewer Grid.Row="1" Grid.Column="0" Height="200" Width="390" IsSelectionEnabled="False" Margin="-4,0,10,0">
+            <FlowDocument>
+                <Paragraph >
+                    <Run>
+                        Task: You are given an integer N. Save into a file the factorial of this number N. In a source file several Ns are given.
+                    </Run>
+                </Paragraph>
+                <Paragraph >
+                    <Run>
+                        Output: Save into a file the factorial of N. Example: For an input of 25, you would get 15511210043330985984000000
+                    </Run>
+                </Paragraph>
+                <Paragraph >
+                    <Run>
+                        Output: Save into a file the factorial of N.
+                    </Run>
+                </Paragraph>
+                <Paragraph >
+                    <Run>
+                        Example: For an input of 25, you would get 15511210043330985984000000
+                    </Run>
+                </Paragraph>
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+        <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Vertical">
+            <Label FontSize="15">source file #1 contains:</Label>
+            <Label x:Name="lblTask2" Height="30" Width="360"></Label>
+            <Label x:Name="lblResultTask2" Height="30" Width="360"></Label>
+        </StackPanel>
+
+        <FlowDocumentScrollViewer Grid.Row="1" Height="200" Width="390" IsSelectionEnabled="False" Margin="0,0,6,0" Grid.Column="1">
+            <FlowDocument>
+                <Paragraph >
+                    <Run>
+                        Task: Given a time in 12-hour AM/PM format, convert it to military (24-hour) time. In a source file several dates to convert are given.
+                    </Run>
+                </Paragraph>
+                <Paragraph >
+                    <Run>
+                        Note:
+                        Midnight is 12:00:00AM on a 12-hour clock, and 00:00:00 on a 24-hour clock.
+                        Noon is 12:00:00PM on a 12-hour clock, and 12:00:00 on a 24-hour clock.
+                    </Run>
+                </Paragraph>
+                <Paragraph >
+                    <Run>
+                        Input Format
+                        A single string containing a time in 12-hour clock format (i.e.: hh:mm:ssAM or hh:mm:ssPM), where
+                        01&lt;=hh&lt;=12 and 01&lt;=mm,ss&lt;=59.
+                    </Run>
+                </Paragraph>
+                <Paragraph >
+                    <Run>
+                        Output Format
+                        Convert and save into a file the given time in 24-hour format, where 00&lt;=hh&lt;=23.
+                    </Run>
+                </Paragraph>
+                <Paragraph >
+                    <Run>
+                        Sample Input: 07:05:45PM
+                    </Run>
+                </Paragraph>
+                <Paragraph >
+                    <Run>
+                        Sample Output: 19:05:45
+                    </Run>
+                </Paragraph>
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Vertical">
+            <Label FontSize="15">source file #2 contains:</Label>
+            <Label x:Name="lblTask3" Height="30" Width="360"></Label>
+            <Label x:Name="lblResultTask3" Height="30" Width="360"></Label>
+        </StackPanel>
+    </Grid >
+</Window>
